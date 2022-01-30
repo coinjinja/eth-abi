@@ -532,7 +532,7 @@ class ByteStringEncoder(BaseEncoder):
         cls.validate_value(value)
 
         if not value:
-            padded_value = b'\x00' * 32
+            padded_value = b''
         else:
             padded_value = zpad_right(value, ceil32(len(value)))
 
